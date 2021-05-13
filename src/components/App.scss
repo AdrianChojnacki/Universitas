@@ -1,0 +1,118 @@
+//--------------------------------------------------------------------------------------------------- IMPORTS ---
+
+@import "Fonts.scss";
+
+//---------------------------------------------------------------------------------------------------- GLOBAL ---
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a {
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+//---------------------------------------------------------------------------------------------------- HEADER ---
+
+.header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 35px 0;
+  background-color: transparent;
+  z-index: 100;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 92px;
+    height: 108px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0;
+  }
+  &__link {
+    padding-right: 70px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.slider__slide {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slider__slide.active {
+  opacity: 1;
+}
+
+.slider__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 32px;
+}
+
+.right-arrow {
+  right: 32px;
+}
