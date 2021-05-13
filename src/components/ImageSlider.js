@@ -20,10 +20,17 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <div className="slider">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <div className="slider__arrows">
+        <div className="container">
+          <FaArrowAltCircleLeft className="slider__prev" onClick={prevSlide} />
+          <FaArrowAltCircleRight className="slider__next" onClick={nextSlide} />
+        </div>
+      </div>
       {SliderData.map((slide, index) => (
-        <div className={index === current ? "slider__slide active" : "slider__slide"} key={index}>
+        <div
+          className={index === current ? "slider__slide slider__slide--active" : "slider__slide"}
+          key={index}
+        >
           {index === current && <img src={slide.image} alt={index} className="slider__image" />}
         </div>
       ))}
