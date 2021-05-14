@@ -2,8 +2,8 @@ import React from "react";
 
 function Services() {
   return (
-    <div>
-      <h1>Services page</h1>
+    <div className="dummy-page">
+      <h1 className="dummy-page__header">Services page</h1>
     </div>
   );
 }

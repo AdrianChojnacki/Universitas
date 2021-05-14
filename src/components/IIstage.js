@@ -2,8 +2,8 @@ import React from "react";
 
 function IIstage() {
   return (
-    <div>
-      <h1>II stage page</h1>
+    <div className="dummy-page">
+      <h1 className="dummy-page__header">II stage page</h1>
     </div>
   );
 }

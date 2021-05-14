@@ -2,8 +2,8 @@ import React from "react";
 
 function Trainings() {
   return (
-    <div>
-      <h1>Trainings page</h1>
+    <div className="dummy-page">
+      <h1 className="dummy-page__header">Trainings page</h1>
     </div>
   );
 }
