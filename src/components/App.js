@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.scss";
-import Nav from "./Nav";
-import Home from "./Home";
-import Istage from "./Istage";
-import IIstage from "./IIstage";
-import Postgraduate from "./Postgraduate";
-import Trainings from "./Trainings";
-import Services from "./Services";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Nav from "./js/Nav";
+import Home from "./js/Home";
+import Istage from "./dummy-pages/Istage";
+import IIstage from "./dummy-pages/IIstage";
+import Postgraduate from "./dummy-pages/Postgraduate";
+import Trainings from "./dummy-pages/Trainings";
+import Services from "./dummy-pages/Services";
 
 function App() {
   return (
