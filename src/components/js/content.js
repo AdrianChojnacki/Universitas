@@ -1,6 +1,6 @@
-import img1 from "../img/photo-1.png";
-import img2 from "../img/photo-2.png";
-import img3 from "../img/photo-3.png";
+import img1 from "../img/photo-1.jpg";
+import img2 from "../img/photo-2.jpg";
+import img3 from "../img/photo-3.jpg";
 
 const content = {
   section1: {

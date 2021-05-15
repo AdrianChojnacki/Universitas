@@ -10,7 +10,7 @@
     justify-content: space-between;
     width: 100%;
   }
-  &__text {
+  &__text-col {
     width: 610px;
     &--reverse {
       order: 1;
@@ -55,11 +55,25 @@
       }
     }
   }
-  &__img {
-    width: 550px;
-    img {
-      max-width: 550px;
-      height: auto;
+  &__img-col {
+    width: 490px;
+  }
+  &__img-box {
+    position: relative;
+    &--video {
+      cursor: pointer;
     }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+  &__video-play {
+    width: 131px;
+    height: 131px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

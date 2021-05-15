@@ -23,6 +23,7 @@ function Home() {
         header={content.section3.header}
         text={content.section3.text}
         img={content.section3.img}
+        video="https://www.youtube.com/embed/u02tycroA30"
       />
     </>
   );
