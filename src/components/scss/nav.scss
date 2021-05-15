@@ -11,11 +11,13 @@
   }
   &__link {
     padding-right: 70px;
-    color: white;
     font-weight: 700;
     text-decoration: none;
     &:last-child {
       padding-right: 0;
+    }
+    * {
+      color: white;
     }
   }
 }
