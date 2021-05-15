@@ -4,5 +4,9 @@
 @import "./scss/nav.scss";
 @import "./scss/start.scss";
 @import "./scss/slider.scss";
-@import "./scss/text-photo.scss";
+@import "./scss/article.scss";
 @import "./scss/dummy-page.scss";
+
+.App {
+  overflow: hidden;
+}
