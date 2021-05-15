@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Nav from "./js/Nav";
+import Header from "./js/Header";
 import Home from "./js/Home";
 import Istage from "./dummy-pages/Istage";
 import IIstage from "./dummy-pages/IIstage";
@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Header />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/istage" component={Istage} />

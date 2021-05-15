@@ -1,0 +1,20 @@
+.start {
+  &__text-box {
+    width: 100%;
+    position: absolute;
+    bottom: 27%;
+    left: 0;
+  }
+  &__header {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.5;
+  }
+  &__text-blue {
+    color: #00b6dc;
+  }
+  &__first-btn {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  align-items: center;
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0;
+  }
+  &__link {
+    padding-right: 70px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
