@@ -46,7 +46,7 @@ function Footer(props) {
           <p>WKonferencje</p>
           <p>Blog</p>
         </div>
-        <p class="footer__realization">Projekt i realizacja: Crafton</p>
+        <p class="footer__realization">Projekt i realizacja: asdzxc</p>
       </div>
     </footer>
   );
