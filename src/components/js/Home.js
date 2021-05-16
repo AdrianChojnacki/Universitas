@@ -32,7 +32,7 @@ function Home() {
         text1={content.section3.text1}
         text2={content.section3.text2}
         img={content.section3.img}
-        video="https://www.youtube.com/embed/u02tycroA30"
+        video={content.section3.video}
       />
       <Form
         header1={content.form.header1}

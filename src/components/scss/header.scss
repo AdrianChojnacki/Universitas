@@ -5,7 +5,12 @@
   left: 0;
   padding: 35px 0;
   background-color: transparent;
+  transition: 0.3s;
   z-index: 100;
+  &--scroll {
+    padding: 15px 0;
+    background-color: #00b6dc;
+  }
   &__container {
     display: flex;
     align-items: center;

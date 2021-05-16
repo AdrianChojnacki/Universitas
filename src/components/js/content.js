@@ -32,6 +32,7 @@ const content = {
     text2:
       "Nasze kierunki studiów są interesujące i innowacyjne, tworzone we współpracy z pracodawcami oraz na podstawie trendów w światowej gospodarce i kierunku zmian na dynamicznym rynku pracy. Nasi absolwenci znajdują pracę zgodną ze swoimi zainteresowaniami i wykształceniem.",
     img: img3,
+    video: "https://www.youtube.com/embed/u02tycroA30",
   },
   form: {
     header1: "Nie znalazłeś odpowiedniego kontaktu?",
