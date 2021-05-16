@@ -4,7 +4,7 @@ import { useState } from "react";
 import videoPlay from "../img/video-play.svg";
 
 function Article(props) {
-  const { header, text, list, img, reverse, video } = props;
+  const { header, text1, text2, listHeader, list, img, reverse, video } = props;
 
   const [popup, setPopup] = useState(false);
 
@@ -17,9 +17,19 @@ function Article(props) {
               reverse ? "article__text-col article__text-col--reverse" : "article__text-col"
             }
           >
-            {header ? header : null}
-            {text ? text : null}
-            {list ? list : null}
+            {header ? <h2 className="article__header">{header}</h2> : null}
+            {text1 ? <p className="article__paragraph">{text1}</p> : null}
+            {text2 ? <p className="article__paragraph">{text2}</p> : null}
+            {listHeader ? <h6 className="article__list-header">{listHeader}</h6> : null}
+            {list ? (
+              <ul className="article__list">
+                {list.map((item, index) => (
+                  <li key={index} className="article__list-item">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
           <div className="article__img-col">
             <div
