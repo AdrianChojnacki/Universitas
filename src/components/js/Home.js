@@ -34,7 +34,16 @@ function Home() {
         img={content.section3.img}
         video="https://www.youtube.com/embed/u02tycroA30"
       />
-      <Form />
+      <Form
+        header1={content.form.header1}
+        header2={content.form.header2}
+        placeholder1={content.form.placeholder1}
+        placeholder2={content.form.placeholder2}
+        placeholder3={content.form.placeholder3}
+        placeholder4={content.form.placeholder4}
+        rodo={content.form.rodo}
+        btn={content.form.btn}
+      />
     </>
   );
 }

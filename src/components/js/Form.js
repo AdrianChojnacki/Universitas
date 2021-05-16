@@ -5,29 +5,33 @@ class Form extends Component {
     firstname: "",
     lastname: "",
     email: "",
-    accept: false,
     message: "",
+    accept: false,
+    confirmation: "",
 
     errors: {
       firstname: false,
       lastname: false,
       email: false,
+      message: false,
       accept: false,
     },
   };
 
-  messages = {
-    firstname_incorrect: "Nazwa musi być dłuższa niż 10 znaków i nie może zawierać spacji",
-    lastname_incorrect: "Nazwa musi być dłuższa niż 10 znaków i nie może zawierać spacji",
-    email_incorrect: "Brak @ w emailu",
-    accept_incorrect: "Nie potwierdzona zgoda",
+  errorMessages = {
+    firstname_incorrect: "Pole wymagane",
+    lastname_incorrect: "Pole wymagane",
+    email_incorrect: "Błędny adres e-mail",
+    message_incorrect: "Pole wymagane",
+    accept_incorrect: "Zgoda wymagana",
   };
 
   handleChange = (e) => {
     const name = e.target.name;
     const type = e.target.type;
+    console.log(name, type);
 
-    if (type === "text" || type === "email") {
+    if (type === "text" || type === "email" || type === "textarea") {
       const value = e.target.value;
 
       this.setState({
@@ -52,13 +56,15 @@ class Form extends Component {
         firstname: "",
         lastname: "",
         email: "",
+        message: "",
         accept: false,
-        message: "Formularz został wysłany",
+        confirmation: "Formularz został wysłany",
 
         errors: {
           firstname: false,
           lastname: false,
           email: false,
+          message: false,
           accept: false,
         },
       });
@@ -68,6 +74,7 @@ class Form extends Component {
           firstname: !validation.firstname,
           lastname: !validation.lastname,
           email: !validation.email,
+          message: !validation.message,
           accept: !validation.accept,
         },
       });
@@ -78,17 +85,24 @@ class Form extends Component {
     let firstname = false;
     let lastname = false;
     let email = false;
+    let message = false;
     let accept = false;
     let correct = false;
 
-    if (this.state.firstname.length > 10 && this.state.firstname.indexOf(" ") === -1) {
+    if (this.state.firstname.length > 0) {
       firstname = true;
     }
-    if (this.state.lastname.length > 10 && this.state.lastname.indexOf(" ") === -1) {
+    if (this.state.lastname.length > 0) {
       lastname = true;
     }
-    if (this.state.email.indexOf("@") !== -1) {
+    if (
+      this.state.email.indexOf("@") !== -1 &&
+      this.state.email.indexOf("@") < this.state.email.length - 1
+    ) {
       email = true;
+    }
+    if (this.state.message.length > 0) {
+      message = true;
     }
     if (this.state.accept) {
       accept = true;
@@ -101,63 +115,116 @@ class Form extends Component {
       firstname,
       lastname,
       email,
+      message,
       accept,
       correct,
     };
   };
 
   componentDidUpdate() {
-    if (this.state.message !== "") {
+    if (this.state.confirmation !== "") {
       setTimeout(() => {
         this.setState({
-          message: "",
+          confirmation: "",
         });
       }, 3000);
     }
   }
 
   render() {
+    const { header1, header2, placeholder1, placeholder2, placeholder3, placeholder4, rodo, btn } =
+      this.props;
+
     return (
       <section className="form">
-        <form onSubmit={this.handleSubmit} noValidate>
-          <input
-            type="text"
-            id="firstname"
-            name="firstname"
-            value={this.state.firstname}
-            onChange={this.handleChange}
-          />
-          {this.state.errors.firstname && <span>{this.messages.firstname_incorrect}</span>}
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            value={this.state.lastname}
-            onChange={this.handleChange}
-          />
-          {this.state.errors.lastname && <span>{this.messages.lastname_incorrect}</span>}
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={this.state.email}
-            onChange={this.handleChange}
-          />
-          {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
-          <label htmlFor="accept">
-            <input
-              type="checkbox"
-              id="accept"
-              name="accept"
-              checked={this.state.accept}
-              onChange={this.handleChange}
-            />
-            Wyrażam zgodę
-            {this.state.errors.accept && <span>{this.messages.accept_incorrect}</span>}
-          </label>
-          <button>Zapisz się</button>
-          {this.state.message && <h3>{this.state.message}</h3>}
-        </form>
+        <div className="form__container container">
+          <form onSubmit={this.handleSubmit} noValidate>
+            {header1 ? <h2 className="form__header">{header1}</h2> : null}
+            {header2 ? <h3 className="form__subheader">{header2}</h3> : null}
+            <div className="form__name-box">
+              <div className="form__input-box form__input-box--name">
+                <input
+                  className={`form__input ${
+                    this.state.firstname ? "form__input--with-content" : ""
+                  }`}
+                  type="text"
+                  id="firstname"
+                  name="firstname"
+                  value={this.state.firstname}
+                  onChange={this.handleChange}
+                />
+                <div className="form__placeholder">{placeholder1}</div>
+                {this.state.errors.firstname && (
+                  <div className="form__incorrect">{this.errorMessages.firstname_incorrect}</div>
+                )}
+              </div>
+              <div className="form__input-box form__input-box--name">
+                <input
+                  className={`form__input ${
+                    this.state.lastname ? "form__input--with-content" : ""
+                  }`}
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  value={this.state.lastname}
+                  onChange={this.handleChange}
+                />
+                <div className="form__placeholder">{placeholder2}</div>
+                {this.state.errors.lastname && (
+                  <div className="form__incorrect">{this.errorMessages.lastname_incorrect}</div>
+                )}
+              </div>
+            </div>
+            <div className="form__input-box">
+              <input
+                className={`form__input ${this.state.email ? "form__input--with-content" : ""}`}
+                type="email"
+                id="email"
+                name="email"
+                value={this.state.email}
+                onChange={this.handleChange}
+              />
+              <div className="form__placeholder">{placeholder3}</div>
+              {this.state.errors.email && (
+                <div className="form__incorrect">{this.errorMessages.email_incorrect}</div>
+              )}
+            </div>
+            <div className="form__input-box form__input-box--message">
+              <textarea
+                className={`form__input form__input--message ${
+                  this.state.message ? "form__input--with-content" : ""
+                }`}
+                id="message"
+                name="message"
+                value={this.state.message}
+                onChange={this.handleChange}
+              ></textarea>
+              <div className="form__placeholder">{placeholder4}</div>
+              {this.state.errors.message && (
+                <div className="form__incorrect">{this.errorMessages.message_incorrect}</div>
+              )}
+            </div>
+            <label className="form__checkbox-label" htmlFor="accept">
+              <input
+                className="form__checkbox"
+                type="checkbox"
+                id="accept"
+                name="accept"
+                checked={this.state.accept}
+                onChange={this.handleChange}
+              />
+              <div className="form__custom-checkbox"></div>
+              {rodo}
+              {this.state.errors.accept && (
+                <div className="form__incorrect form__incorrect--checkbox">
+                  {this.errorMessages.accept_incorrect}
+                </div>
+              )}
+            </label>
+            <button class="form__btn btn btn--blue">{btn}</button>
+            {this.state.confirmation && <h3>{this.state.confirmation}</h3>}
+          </form>
+        </div>
       </section>
     );
   }

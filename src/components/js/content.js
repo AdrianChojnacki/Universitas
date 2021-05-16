@@ -36,6 +36,10 @@ const content = {
   form: {
     header1: "Nie znalazłeś odpowiedniego kontaktu?",
     header2: "Skorzystaj z formularza.",
+    placeholder1: "Imię",
+    placeholder2: "Nazwisko",
+    placeholder3: "Adres e-mail",
+    placeholder4: "Treść wiadomości",
     rodo: "Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia 1997 roku o ochronie danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w celach marketingowych przez Collegium Da Vinci i oświadczam, iż podanie przeze mnie danych osobowych jest dobrowolne oraz iż zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich zmiany oraz usunięcia.",
     btn: "WYŚLIJ",
   },

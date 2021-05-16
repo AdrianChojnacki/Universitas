@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Muli", sans-serif;
 }
 
 body {
-  font-family: "Muli", sans-serif;
   color: #002841;
   font-size: 16px;
 }
@@ -27,6 +27,7 @@ body {
   font-weight: 800;
   line-height: 4.29;
   text-decoration: none;
+  cursor: pointer;
   transition: 0.3s;
   &:hover {
     background-color: transparent;
@@ -40,6 +41,14 @@ body {
       background-color: #fff;
       color: #002841;
       opacity: 1;
+    }
+  }
+  &--blue {
+    background-color: #00b6dc;
+    border-color: #00b6dc;
+    color: #fff;
+    &:hover {
+      color: #00b6dc;
     }
   }
 }
