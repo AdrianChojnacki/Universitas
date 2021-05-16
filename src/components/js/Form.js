@@ -222,7 +222,9 @@ class Form extends Component {
               )}
             </label>
             <button class="form__btn btn btn--blue">{btn}</button>
-            {this.state.confirmation && <h3>{this.state.confirmation}</h3>}
+            {this.state.confirmation && (
+              <p className="form__confirmation">{this.state.confirmation}</p>
+            )}
           </form>
         </div>
       </section>

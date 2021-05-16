@@ -6,6 +6,7 @@
   background-color: #f5f8fa;
   &__container {
     max-width: 580px;
+    position: relative;
   }
   &__header {
     color: #333333;
@@ -123,5 +124,13 @@
     margin: auto;
     padding: 16px 31px;
     line-height: 1;
+  }
+  &__confirmation {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: green;
+    font-size: 20px;
   }
 }

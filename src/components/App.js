@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./js/Header";
+import Footer from "./js/Footer";
 import Home from "./js/Home";
 import Istage from "./dummy-pages/Istage";
 import IIstage from "./dummy-pages/IIstage";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/trainings" component={Trainings} />
           <Route path="/services" component={Services} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
