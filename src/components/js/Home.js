@@ -1,7 +1,8 @@
 import React from "react";
+import content from "./content";
 import Start from "./Start";
 import Article from "./Article";
-import content from "./content";
+import Form from "./Form";
 
 function Home() {
   return (
@@ -33,6 +34,7 @@ function Home() {
         img={content.section3.img}
         video="https://www.youtube.com/embed/u02tycroA30"
       />
+      <Form />
     </>
   );
 }

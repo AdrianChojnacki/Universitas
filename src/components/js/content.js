@@ -33,6 +33,12 @@ const content = {
       "Nasze kierunki studiów są interesujące i innowacyjne, tworzone we współpracy z pracodawcami oraz na podstawie trendów w światowej gospodarce i kierunku zmian na dynamicznym rynku pracy. Nasi absolwenci znajdują pracę zgodną ze swoimi zainteresowaniami i wykształceniem.",
     img: img3,
   },
+  form: {
+    header1: "Nie znalazłeś odpowiedniego kontaktu?",
+    header2: "Skorzystaj z formularza.",
+    rodo: "Wyrażam zgodę na przetwarzanie moich danych osobowych w rozumieniu ustawy z dnia 29 sierpnia 1997 roku o ochronie danych osobowych oraz ustawy z dnia 16 lipca 2004 roku Prawo telekomunikacyjne w celach marketingowych przez Collegium Da Vinci i oświadczam, iż podanie przeze mnie danych osobowych jest dobrowolne oraz iż zostałem poinformowany o prawie żądania dostępu do moich danych osobowych, ich zmiany oraz usunięcia.",
+    btn: "WYŚLIJ",
+  },
 };
 
 export default content;
