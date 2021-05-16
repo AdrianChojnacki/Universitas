@@ -9,7 +9,7 @@ function Article(props) {
   const [popup, setPopup] = useState(false);
 
   return (
-    <div className="article">
+    <section className="article">
       <div className="article__container container">
         <div className="article__box">
           <div
@@ -28,7 +28,10 @@ function Article(props) {
             >
               <img className="article__img" src={img} alt="article" />
               {video ? (
-                <img src={videoPlay} className="article__video-play" alt="video-play" />
+                <>
+                  <img src={videoPlay} className="article__video-play" alt="video-play" />
+                  <div className="article__video-shadow"></div>
+                </>
               ) : null}
             </div>
           </div>
@@ -37,8 +40,7 @@ function Article(props) {
       {video ? (
         <Popup trigger={popup} setTrigger={setPopup}>
           <iframe
-            width="560"
-            height="315"
+            className="popup__video"
             src={video}
             title="YouTube video player"
             frameborder="0"
@@ -47,7 +49,7 @@ function Article(props) {
           ></iframe>
         </Popup>
       ) : null}
-    </div>
+    </section>
   );
 }
 

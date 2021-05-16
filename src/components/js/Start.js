@@ -4,7 +4,7 @@ import { SliderData } from "./SliderData";
 
 function Start() {
   return (
-    <div className="start">
+    <section className="start">
       <ImageSlider slides={SliderData} />
       <div class="start__text-box">
         <div className="container">
@@ -21,7 +21,7 @@ function Start() {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
