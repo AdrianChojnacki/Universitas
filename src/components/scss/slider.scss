@@ -4,9 +4,10 @@
   justify-content: center;
   height: 100vh;
   position: relative;
+  background-color: #00b6dc;
   &__slide {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -47,6 +48,25 @@
     transition: 0.3s;
     &:hover {
       opacity: 1;
+    }
+  }
+  &__pagination {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  &__pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 28px 0;
+    background-color: #fff;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    &--active {
+      background-color: #ffcd19;
     }
   }
 }

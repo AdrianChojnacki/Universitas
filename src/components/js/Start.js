@@ -1,5 +1,5 @@
 import React from "react";
-import ImageSlider from "./ImageSlider";
+import Slider from "./Slider";
 import { SliderData } from "./SliderData";
 
 function Start(props) {
@@ -7,7 +7,7 @@ function Start(props) {
 
   return (
     <section className="start">
-      <ImageSlider slides={SliderData} />
+      <Slider slides={SliderData} />
       <div class="start__text-box">
         <div className="container">
           <h1 className="start__header">

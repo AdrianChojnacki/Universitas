@@ -5,7 +5,7 @@ import arrowLeftHover from "../img/arrow-left-white.svg";
 import arrowRight from "../img/arrow-right-white.svg";
 import arrowRightHover from "../img/arrow-right-yellow.svg";
 
-const ImageSlider = ({ slides }) => {
+const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
@@ -17,16 +17,18 @@ const ImageSlider = ({ slides }) => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
-  if (!Array.isArray(slides) || slides.lenght <= 0) {
-    return null;
-  }
+  const bulletSlide = (index) => {
+    setCurrent(index);
+  };
+
+  // if (!Array.isArray(slides) || slides.lenght <= 0) {
+  //   return null;
+  // }
 
   return (
     <div className="slider">
       <div className="slider__arrows">
         <div className="container">
-          {/* <FaArrowAltCircleLeft className="slider__prev" onClick={prevSlide} />
-          <FaArrowAltCircleRight className="slider__next" onClick={nextSlide} /> */}
           <div className="slider__prev" onClick={prevSlide}>
             <img src={arrowLeft} alt="arrow-left" />
             <img className="slider__hover-arrow" src={arrowLeftHover} alt="arrow-left-hover" />
@@ -36,6 +38,19 @@ const ImageSlider = ({ slides }) => {
             <img className="slider__hover-arrow" src={arrowRightHover} alt="arrow-right-hover" />
           </div>
         </div>
+      </div>
+      <div className="slider__pagination">
+        {SliderData.map((slide, index) => (
+          <div
+            className={
+              current === index
+                ? "slider__pagination-bullet slider__pagination-bullet--active"
+                : "slider__pagination-bullet"
+            }
+            onClick={bulletSlide.bind(null, index)}
+            key={index}
+          ></div>
+        ))}
       </div>
       {SliderData.map((slide, index) => (
         <div
@@ -49,4 +64,4 @@ const ImageSlider = ({ slides }) => {
   );
 };
 
-export default ImageSlider;
+export default Slider;
