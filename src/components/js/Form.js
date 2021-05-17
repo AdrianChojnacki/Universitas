@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Axios from "axios";
 
 class Form extends Component {
   state = {
@@ -50,8 +51,23 @@ class Form extends Component {
     e.preventDefault();
 
     const validation = this.formValidation();
+    const saveFormURL = "http://localhost/crafton/form.php";
 
     if (validation.correct) {
+      Axios.post(saveFormURL, {
+        firstName: this.state.firstname,
+        lastName: this.state.lastname,
+        email: this.state.email,
+        message: this.state.message,
+        accept: this.state.accept,
+      })
+        .then(function (response) {
+          console.log(response); // Tutaj setState confirmation msg dla wysłanego forma
+        })
+        .catch(function (error) {
+          console.log(error); // Tutaj setState confirmation msg dla errora
+        });
+
       this.setState({
         firstname: "",
         lastname: "",
