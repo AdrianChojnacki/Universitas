@@ -1,5 +1,5 @@
 import React from "react";
-import content from "./content";
+import provider from "./provider";
 import Start from "./Start";
 import Article from "./Article";
 import Form from "./Form";
@@ -8,41 +8,41 @@ function Home() {
   return (
     <>
       <Start
-        header1={content.start.header1}
-        header2={content.start.header2}
-        btn1={content.start.btn1}
-        btn2={content.start.btn2}
+        header1={provider.start.header1}
+        header2={provider.start.header2}
+        btn1={provider.start.btn1}
+        btn2={provider.start.btn2}
       />
       <Article
-        header={content.section1.header}
-        text1={content.section1.text1}
-        text2={content.section1.text2}
-        listHeader={content.section1.listHeader}
-        list={content.section1.list}
-        img={content.section1.img}
+        header={provider.section1.header}
+        text1={provider.section1.text1}
+        text2={provider.section1.text2}
+        listHeader={provider.section1.listHeader}
+        list={provider.section1.list}
+        img={provider.section1.img}
       />
       <Article
-        header={content.section2.header}
-        text1={content.section2.text1}
-        img={content.section2.img}
+        header={provider.section2.header}
+        text1={provider.section2.text1}
+        img={provider.section2.img}
         reverse={true}
       />
       <Article
-        header={content.section3.header}
-        text1={content.section3.text1}
-        text2={content.section3.text2}
-        img={content.section3.img}
-        video={content.section3.video}
+        header={provider.section3.header}
+        text1={provider.section3.text1}
+        text2={provider.section3.text2}
+        img={provider.section3.img}
+        video={provider.section3.video}
       />
       <Form
-        header1={content.form.header1}
-        header2={content.form.header2}
-        placeholder1={content.form.placeholder1}
-        placeholder2={content.form.placeholder2}
-        placeholder3={content.form.placeholder3}
-        placeholder4={content.form.placeholder4}
-        rodo={content.form.rodo}
-        btn={content.form.btn}
+        header1={provider.form.header1}
+        header2={provider.form.header2}
+        placeholder1={provider.form.placeholder1}
+        placeholder2={provider.form.placeholder2}
+        placeholder3={provider.form.placeholder3}
+        placeholder4={provider.form.placeholder4}
+        rodo={provider.form.rodo}
+        btn={provider.form.btn}
       />
     </>
   );
