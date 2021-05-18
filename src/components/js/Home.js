@@ -6,49 +6,59 @@ import Form from "./Form";
 
 class Home extends React.Component {
   state = {
-    content: null,
+    content: {},
   };
+
+  async componentDidMount() {
+    // const { start } = await provider();
+    // const { header1 } = start;
+    this.setState({
+      content: await provider(),
+    });
+  }
 
   render() {
     return (
       <>
-        <Start
-          header1={provider.start.header1}
-          header2={provider.start.header2}
-          btn1={provider.start.btn1}
-          btn2={provider.start.btn2}
+        {/* {JSON.stringify(this.state.content.header1)} */}
+        {this.state.content}
+        {/* <Start
+          header1={this.state.content.start.header1}
+          header2={this.state.content.start.header2}
+          btn1={this.state.content.start.btn1}
+          btn2={this.state.content.start.btn2}
         />
         <Article
-          header={provider.section1.header}
-          text1={provider.section1.text1}
-          text2={provider.section1.text2}
-          listHeader={provider.section1.listHeader}
-          list={provider.section1.list}
-          img={provider.section1.img}
+          header={this.state.content.section1.header}
+          text1={this.state.content.section1.text1}
+          text2={this.state.content.section1.text2}
+          listHeader={this.state.content.section1.listHeader}
+          list={this.state.content.section1.list}
+          img={this.state.content.section1.img}
         />
         <Article
-          header={provider.section2.header}
-          text1={provider.section2.text1}
-          img={provider.section2.img}
+          header={this.state.content.section2.header}
+          text1={this.state.content.section2.text1}
+          img={this.state.content.section2.img}
           reverse={true}
         />
         <Article
-          header={provider.section3.header}
-          text1={provider.section3.text1}
-          text2={provider.section3.text2}
-          img={provider.section3.img}
-          video={provider.section3.video}
+          header={this.state.content.section3.header}
+          text1={this.state.content.section3.text1}
+          text2={this.state.content.section3.text2}
+          img={this.state.content.section3.img}
+          video={this.state.content.section3.video}
         />
         <Form
-          header1={provider.form.header1}
-          header2={provider.form.header2}
-          placeholder1={provider.form.placeholder1}
-          placeholder2={provider.form.placeholder2}
-          placeholder3={provider.form.placeholder3}
-          placeholder4={provider.form.placeholder4}
-          rodo={provider.form.rodo}
-          btn={provider.form.btn}
-        />
+          header1={this.state.content.form.header1}
+          header2={this.state.content.form.header2}
+          placeholder1={this.state.content.form.placeholder1}
+          placeholder2={this.state.content.form.placeholder2}
+          placeholder3={this.state.content.form.placeholder3}
+          placeholder4={this.state.content.form.placeholder4}
+          rodo={this.state.content.form.rodo}
+          btn={this.state.content.form.btn}
+        /> */}
       </>
     );
   }
