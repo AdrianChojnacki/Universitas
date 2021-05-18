@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SliderData } from "./SliderData";
+// import { SliderData } from "./SliderData";
 import arrowLeft from "../img/arrow-left-yellow.svg";
 import arrowLeftHover from "../img/arrow-left-white.svg";
 import arrowRight from "../img/arrow-right-white.svg";
@@ -21,9 +21,9 @@ const Slider = ({ slides }) => {
     setCurrent(index);
   };
 
-  // if (!Array.isArray(slides) || slides.lenght <= 0) {
-  //   return null;
-  // }
+  if (!Array.isArray(slides) || slides.lenght <= 0) {
+    return null;
+  }
 
   return (
     <div className="slider">
@@ -40,7 +40,7 @@ const Slider = ({ slides }) => {
         </div>
       </div>
       <div className="slider__pagination">
-        {SliderData.map((slide, index) => (
+        {slides.map((slide, index) => (
           <div
             className={
               current === index
@@ -52,7 +52,7 @@ const Slider = ({ slides }) => {
           ></div>
         ))}
       </div>
-      {SliderData.map((slide, index) => (
+      {slides.map((slide, index) => (
         <div
           className={index === current ? "slider__slide slider__slide--active" : "slider__slide"}
           key={index}
