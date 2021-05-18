@@ -91,7 +91,7 @@ class Form extends Component {
     e.preventDefault();
 
     const validation = this.formValidation();
-    const saveFormURL = "http://localhost:3000/form.php";
+    const saveFormURL = "http://chojnacki.eu/form.php";
     const that = this;
 
     if (validation.correct) {
