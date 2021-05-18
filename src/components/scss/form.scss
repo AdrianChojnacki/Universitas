@@ -132,5 +132,8 @@
     transform: translateX(-50%);
     color: green;
     font-size: 20px;
+    &--error {
+      color: #ff3139;
+    }
   }
 }

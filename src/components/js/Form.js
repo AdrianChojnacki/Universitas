@@ -9,6 +9,7 @@ class Form extends Component {
     message: "",
     accept: false,
     confirmation: "",
+    confirmationError: false,
 
     errors: {
       firstname: false,
@@ -30,7 +31,6 @@ class Form extends Component {
   handleChange = (e) => {
     const name = e.target.name;
     const type = e.target.type;
-    console.log(name, type);
 
     if (type === "text" || type === "email" || type === "textarea") {
       const value = e.target.value;
@@ -43,56 +43,6 @@ class Form extends Component {
 
       this.setState({
         [name]: checked,
-      });
-    }
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-
-    const validation = this.formValidation();
-    const saveFormURL = "http://localhost/crafton/form.php";
-
-    if (validation.correct) {
-      Axios.post(saveFormURL, {
-        firstName: this.state.firstname,
-        lastName: this.state.lastname,
-        email: this.state.email,
-        message: this.state.message,
-        accept: this.state.accept,
-      })
-        .then(function (response) {
-          console.log(response); // Tutaj setState confirmation msg dla wysłanego forma
-        })
-        .catch(function (error) {
-          console.log(error); // Tutaj setState confirmation msg dla errora
-        });
-
-      this.setState({
-        firstname: "",
-        lastname: "",
-        email: "",
-        message: "",
-        accept: false,
-        confirmation: "Formularz został wysłany",
-
-        errors: {
-          firstname: false,
-          lastname: false,
-          email: false,
-          message: false,
-          accept: false,
-        },
-      });
-    } else {
-      this.setState({
-        errors: {
-          firstname: !validation.firstname,
-          lastname: !validation.lastname,
-          email: !validation.email,
-          message: !validation.message,
-          accept: !validation.accept,
-        },
       });
     }
   };
@@ -135,6 +85,63 @@ class Form extends Component {
       accept,
       correct,
     };
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    const validation = this.formValidation();
+    const saveFormURL = "http://localhost/crafton/form.php";
+    const that = this;
+
+    if (validation.correct) {
+      Axios.post(saveFormURL, {
+        firstName: this.state.firstname,
+        lastName: this.state.lastname,
+        email: this.state.email,
+        message: this.state.message,
+        accept: this.state.accept,
+      })
+        .then(function (response) {
+          console.log(response);
+          that.setState({
+            firstname: "",
+            lastname: "",
+            email: "",
+            message: "",
+            accept: false,
+            confirmation: "Formularz został wysłany",
+            confirmationError: false,
+          });
+        })
+        .catch(function (error) {
+          console.log(error);
+          that.setState({
+            confirmation: "Wysyłanie nie powiodło się",
+            confirmationError: true,
+          });
+        });
+
+      this.setState({
+        errors: {
+          firstname: false,
+          lastname: false,
+          email: false,
+          message: false,
+          accept: false,
+        },
+      });
+    } else {
+      this.setState({
+        errors: {
+          firstname: !validation.firstname,
+          lastname: !validation.lastname,
+          email: !validation.email,
+          message: !validation.message,
+          accept: !validation.accept,
+        },
+      });
+    }
   };
 
   componentDidUpdate() {
@@ -239,7 +246,15 @@ class Form extends Component {
             </label>
             <button class="form__btn btn btn--blue">{btn}</button>
             {this.state.confirmation && (
-              <p className="form__confirmation">{this.state.confirmation}</p>
+              <p
+                className={
+                  this.state.confirmationError
+                    ? "form__confirmation form__confirmation--error"
+                    : "form__confirmation"
+                }
+              >
+                {this.state.confirmation}
+              </p>
             )}
           </form>
         </div>
