@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import Start from "./Start";
 import Article from "./Article";
 import Form from "./Form";
 
-class Home extends React.Component {
+class Home extends Component {
   state = {
     content: {},
   };

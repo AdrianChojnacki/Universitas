@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 const styles = [
   {
@@ -163,7 +163,7 @@ const styles = [
 
 window.initMap = function () {
   const myLatLng = { lat: -25.363, lng: 131.044 };
-  const map = new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(this.refs.map.getDOMNode(), {
     zoom: 4,
     center: myLatLng,
     styles,
@@ -176,12 +176,37 @@ window.initMap = function () {
   });
 };
 
-function Map() {
-  return (
-    <>
-      <div id="map"></div>
-    </>
-  );
+function loadJS(src) {
+  var ref = window.document.getElementsByTagName("script")[0];
+  var script = window.document.createElement("script");
+  script.src = src;
+  script.async = true;
+  ref.parentNode.insertBefore(script, ref);
+}
+
+class Map extends Component {
+  componentDidMount() {
+    // Connect the initMap() function within this class to the global window context,
+    // so Google Maps can invoke it
+    window.initMap = this.initMap;
+    // Asynchronously load the Google Maps script, passing in the callback reference
+    loadJS(
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly"
+    );
+  }
+
+  render() {
+    const style = {
+      height: "500px",
+      width: "500px",
+    };
+
+    return (
+      <>
+        <div ref="map" style={style}></div>
+      </>
+    );
+  }
 }
 
 export default Map;
