@@ -8,7 +8,7 @@ function Start(props) {
   return (
     <section className="start">
       <Slider slides={SliderData} />
-      <div class="start__text-box">
+      <div className="start__text-box">
         <div className="container">
           <h1 className="start__header">
             {header1}

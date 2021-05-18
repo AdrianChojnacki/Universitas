@@ -91,7 +91,7 @@ class Form extends Component {
     e.preventDefault();
 
     const validation = this.formValidation();
-    const saveFormURL = "http://localhost/crafton/form.php";
+    const saveFormURL = "http://localhost:3000/form.php";
     const that = this;
 
     if (validation.correct) {
@@ -244,7 +244,7 @@ class Form extends Component {
                 </div>
               )}
             </label>
-            <button class="form__btn btn btn--blue">{btn}</button>
+            <button className="form__btn btn btn--blue">{btn}</button>
             {this.state.confirmation && (
               <p
                 className={
