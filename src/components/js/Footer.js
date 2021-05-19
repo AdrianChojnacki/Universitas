@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import map from "../img/map.jpg";
-import Map from "./Map";
+import GoogleMap from "./GoogleMap";
 
 class Footer extends Component {
   render() {
@@ -16,7 +16,7 @@ class Footer extends Component {
               </a>
             </div>
             {/* <img src={map} alt="map" /> */}
-            <Map />
+            <GoogleMap />
           </div>
           <div>
             <h6 className="footer__header">O nas</h6>
