@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { SliderData } from "./SliderData";
 import arrowLeft from "../img/arrow-left-yellow.svg";
 import arrowLeftHover from "../img/arrow-left-white.svg";
 import arrowRight from "../img/arrow-right-white.svg";

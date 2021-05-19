@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import map from "../img/map.jpg";
 import GoogleMap from "./GoogleMap";
 
 class Footer extends Component {
@@ -15,7 +14,6 @@ class Footer extends Component {
                 tel. 61 27 11 000
               </a>
             </div>
-            {/* <img src={map} alt="map" /> */}
             <GoogleMap />
           </div>
           <div className="footer__links-col">

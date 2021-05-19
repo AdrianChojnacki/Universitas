@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Slider from "./Slider";
-// import { SliderData } from "./SliderData";
 
 class Start extends Component {
   state = {
