@@ -52,3 +52,12 @@ body {
     }
   }
 }
+
+//---------- MEDIA ----------
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: unset;
+    padding: 0 15px;
+  }
+}

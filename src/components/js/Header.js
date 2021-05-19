@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../img/logo.svg";
-import Nav from "./Nav";
+import hamburger from "../img/hamburger.png";
+import close from "../img/close.png";
 
 class Header extends Component {
   state = {
     scrolled: false,
+    mobileActive: false,
   };
 
   handleScroll = () => {
@@ -18,6 +20,18 @@ class Header extends Component {
         scrolled: false,
       });
     }
+  };
+
+  handleHamburgerClick = () => {
+    this.setState({
+      mobileActive: true,
+    });
+  };
+
+  handleCloseClick = () => {
+    this.setState({
+      mobileActive: false,
+    });
   };
 
   componentDidMount() {
@@ -35,7 +49,32 @@ class Header extends Component {
           <Link to="/">
             <img src={logo} className="header__logo" alt="logo" />
           </Link>
-          <Nav />
+          <nav className={`nav ${this.state.mobileActive ? "nav--active" : ""}`}>
+            <ul className="nav__list">
+              <Link className="nav__link" to="/istage">
+                <li>I stopnia</li>
+              </Link>
+              <Link className="nav__link" to="/iistage">
+                <li>II stopnia</li>
+              </Link>
+              <Link className="nav__link" to="/postgraduate">
+                <li>Podyplomowe</li>
+              </Link>
+              <Link className="nav__link" to="/trainings">
+                <li>Szkolenia</li>
+              </Link>
+              <Link className="nav__link" to="/services">
+                <li>Usługi</li>
+              </Link>
+            </ul>
+            <img src={close} className="nav__close" onClick={this.handleCloseClick} alt="close" />
+          </nav>
+          <img
+            src={hamburger}
+            className="header__hamburger"
+            onClick={this.handleHamburgerClick}
+            alt="hamburger"
+          />
         </div>
       </header>
     );

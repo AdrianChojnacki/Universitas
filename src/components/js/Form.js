@@ -63,7 +63,7 @@ class Form extends Component {
     }
     if (
       this.state.email.indexOf("@") !== -1 &&
-      this.state.email.indexOf("@") < this.state.email.length - 1
+      this.state.email.indexOf(".") < this.state.email.length - 1
     ) {
       email = true;
     }

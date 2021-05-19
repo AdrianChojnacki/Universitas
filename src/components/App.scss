@@ -1,7 +1,7 @@
 @import "./scss/fonts.scss";
 @import "./scss/global.scss";
 @import "./scss/header.scss";
-@import "./scss/nav.scss";
+// @import "./scss/nav.scss";
 @import "./scss/footer.scss";
 @import "./scss/start.scss";
 @import "./scss/slider.scss";
@@ -9,3 +9,9 @@
 @import "./scss/popup.scss";
 @import "./scss/form.scss";
 @import "./scss/dummy-page.scss";
+
+// @media (max-width: 1024px) {
+//   .App {
+//     overflow: hidden;
+//   }
+// }

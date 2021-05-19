@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   align-items: center;
+  transition: 0.3s;
   &__list {
     list-style: none;
     display: flex;
@@ -24,6 +25,38 @@
       &:hover {
         color: #00b6dc;
       }
+    }
+  }
+  &__close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: green;
+  }
+}
+
+//---------- MEDIA ----------
+
+@media (max-width: 1024px) {
+  .nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: #00b6dc;
+    &--active {
+      top: 0;
+    }
+    &__list {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+    &__link {
+      padding-right: 0;
+      font-size: 28px;
     }
   }
 }
