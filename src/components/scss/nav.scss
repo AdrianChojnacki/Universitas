@@ -14,13 +14,16 @@
     padding-right: 70px;
     font-weight: 700;
     line-height: 60px;
-
     text-decoration: none;
     &:last-child {
       padding-right: 0;
     }
     * {
       color: #fff;
+      transition: 0.3s;
+      &:hover {
+        color: #00b6dc;
+      }
     }
   }
 }

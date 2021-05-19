@@ -8,11 +8,16 @@
   transition: 0.3s;
   z-index: 100;
   &--scroll {
-    display: none;
     padding: 10px 0;
     background-color: #00b6dc;
     .header__logo {
       width: 60px;
+    }
+    .nav__link {
+      margin-bottom: 0;
+      *:hover {
+        color: #002841;
+      }
     }
   }
   &__container {
