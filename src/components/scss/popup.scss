@@ -36,3 +36,14 @@
     height: 480px;
   }
 }
+
+//---------- MEDIA ----------
+
+@media (max-width: 1024px) {
+  .popup {
+    &__video {
+      width: 240px;
+      height: 160px;
+    }
+  }
+}

@@ -118,14 +118,42 @@
 
 @media (max-width: 1024px) {
   .article {
+    padding-top: 60px;
+    padding-bottom: 60px;
     &__box {
       flex-direction: column;
     }
     &__text-col {
       width: 100%;
+      &--reverse {
+        order: -1;
+      }
+    }
+    &__header {
+      margin-bottom: 20px;
+      font-size: 30px;
+      line-height: 40px;
+    }
+    &__paragraph {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__list-header {
+      margin-bottom: 10px;
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__list-item {
+      padding-left: 25px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      line-height: 24px;
     }
     &__img-col {
       width: 100%;
+      padding-top: 30px;
     }
   }
 }
