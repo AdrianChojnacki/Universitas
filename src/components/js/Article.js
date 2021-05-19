@@ -1,10 +1,10 @@
 import React from "react";
 import Popup from "./Popup";
 import { useState } from "react";
-import videoPlay from "../img/video-play-svg.svg";
+import videoPlay from "../img/video-play.svg";
 
 function Article(props) {
-  const { header, text1, text2, listHeader, list, img, reverse, video } = props;
+  const { header, text1, text2, linkText, linkHref, listHeader, list, img, reverse, video } = props;
 
   const [popup, setPopup] = useState(false);
 
@@ -19,7 +19,17 @@ function Article(props) {
           >
             {header ? <h2 className="article__header">{header}</h2> : null}
             {text1 ? <p className="article__paragraph">{text1}</p> : null}
-            {text2 ? <p className="article__paragraph">{text2}</p> : null}
+            {text2 ? (
+              <p className="article__paragraph">
+                {text2}
+                {linkText ? (
+                  <a className="article__link" href={linkHref} target="_blank" rel="noreferrer">
+                    {linkText}
+                  </a>
+                ) : null}
+                .
+              </p>
+            ) : null}
             {listHeader ? <h6 className="article__list-header">{listHeader}</h6> : null}
             {list ? (
               <ul className="article__list">

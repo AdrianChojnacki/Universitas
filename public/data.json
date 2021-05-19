@@ -8,7 +8,9 @@
   "section1": {
     "header": "Dla kogo?",
     "text1": "Dedykowane nauczycielom posiadającym przygotowanie pedagogiczne, którzy chcą uzyskać merytoryczne i metodyczne przygotowanie do nauczania kolejnego przedmiotu - Geografii.",
-    "text2": "Studia adresowane są do osób legitymujących się wyższym wykształceniem na poziomie studiów licencjackim o specjalnościach nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, lub słuchaczy legitymujących się wyższym wykształceniem na poziomie studiów magisterskich nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, zgodnie z Rozporządzeniem Ministra Edukacji Narodowej z dnia 1 sierpnia 2017 r. w sprawie szczegółowych kwalifikacji wymaganych od nauczycieli (Dz.U. 2017 poz. 1575).",
+    "text2": "Studia adresowane są do osób legitymujących się wyższym wykształceniem na poziomie studiów licencjackim o specjalnościach nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, lub słuchaczy legitymujących się wyższym wykształceniem na poziomie studiów magisterskich nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, zgodnie z Rozporządzeniem Ministra Edukacji Narodowej z dnia 1 sierpnia 2017 r. w sprawie szczegółowych kwalifikacji wymaganych od nauczycieli ",
+    "linkText": "(Dz.U. 2017 poz. 1575)",
+    "linkHref": "http://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20170001575",
     "listHeader": "Wymagane od kandydata:",
     "list": ["Ukończone studia wyższe", "Przygotowanie pedagogiczne"],
     "img": "img/photo-1.jpg"

@@ -32,6 +32,8 @@ class Home extends Component {
           header={this.state.content?.section1?.header}
           text1={this.state.content?.section1?.text1}
           text2={this.state.content?.section1?.text2}
+          linkText={this.state.content?.section1?.linkText}
+          linkHref={this.state.content?.section1?.linkHref}
           listHeader={this.state.content?.section1?.listHeader}
           list={this.state.content?.section1?.list}
           img={this.state.content?.section1?.img}

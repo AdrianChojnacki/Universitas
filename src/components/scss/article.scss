@@ -31,6 +31,13 @@
       margin-bottom: 0;
     }
   }
+  &__link {
+    color: #00b6dc;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   &__list-header {
     margin-bottom: 16px;
     padding-top: 30px;
