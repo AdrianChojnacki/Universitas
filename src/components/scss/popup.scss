@@ -42,8 +42,26 @@
 @media (max-width: 1024px) {
   .popup {
     &__video {
-      width: 240px;
-      height: 160px;
+      width: 600px;
+      height: 400px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    &__video {
+      width: 360px;
+      height: 240px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .popup {
+    &__video {
+      width: 216px;
+      height: 144px;
     }
   }
 }

@@ -55,13 +55,32 @@
     padding-top: 60px;
     padding-bottom: 40px;
     &__container {
-      flex-direction: column;
+      flex-wrap: wrap;
     }
     &__address-col {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
       margin-right: 0;
+    }
+    &__links-col {
+      padding-top: 40px;
+    }
+    &__realization {
+      width: 100%;
+      position: static;
+      margin-top: 50px;
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__container {
+      flex-direction: column;
     }
     &__address-box {
       margin-bottom: 30px;
@@ -74,12 +93,6 @@
     }
     &__link {
       margin-bottom: 15px;
-    }
-    &__realization {
-      position: static;
-      margin-top: 50px;
-      margin-bottom: 0;
-      text-align: right;
     }
   }
 }

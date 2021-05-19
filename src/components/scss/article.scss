@@ -108,7 +108,7 @@
 
 //---------- MEDIA ----------
 
-@media (max-height: 768px) {
+@media (max-height: 1200px) {
   .article {
     height: auto;
     padding-top: 100px;
@@ -118,6 +118,7 @@
 
 @media (max-width: 1024px) {
   .article {
+    height: auto;
     padding-top: 60px;
     padding-bottom: 60px;
     &__box {
