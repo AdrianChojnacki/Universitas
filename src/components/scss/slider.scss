@@ -71,8 +71,16 @@
   }
 }
 
+//---------- MEDIA ----------
+
 @media (max-width: 1024px) {
   .slider {
+    &__arrows {
+      bottom: 5%;
+    }
+    &__prev {
+      margin-right: 30px;
+    }
     &__pagination {
       display: none;
     }
