@@ -10,14 +10,17 @@
     padding: 0;
   }
   &__link {
+    margin-bottom: 15px;
     padding-right: 70px;
     font-weight: 700;
+    line-height: 60px;
+
     text-decoration: none;
     &:last-child {
       padding-right: 0;
     }
     * {
-      color: white;
+      color: #fff;
     }
   }
 }

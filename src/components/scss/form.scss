@@ -12,7 +12,7 @@
     color: #333333;
     font-size: 18px;
     font-weight: 600;
-    line-height: 1.78;
+    line-height: 32px;
     text-align: center;
   }
   &__subheader {
@@ -20,7 +20,7 @@
     color: #7b94a5;
     font-size: 15px;
     font-weight: 600;
-    line-height: 2.13;
+    line-height: 32px;
     text-align: center;
   }
   &__name-box {
@@ -49,7 +49,7 @@
     color: #002841;
     font-size: 15px;
     font-weight: 600;
-    line-height: 2.13;
+    line-height: 32px;
     cursor: pointer;
     transition: 0.3s;
     &:focus {
@@ -57,12 +57,12 @@
       outline: none;
     }
     &:invalid {
-      border-color: #ff3139;
-      color: #ff3139;
+      border-color: #ff4148;
+      color: #ff4148;
     }
     &:focus + .form__placeholder,
     &--with-content + .form__placeholder {
-      padding-top: 9px;
+      padding-top: 0px;
       font-size: 11px;
       font-weight: 600;
     }
@@ -76,17 +76,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 15px;
+    padding: 9px 15px 15px;
     color: #7b94a5;
     font-size: 15px;
-    // line-height: 2.13;
+    line-height: 32px;
     pointer-events: none;
   }
   &__incorrect {
     position: absolute;
     bottom: -15px;
     padding-left: 15px;
-    color: #ff3139;
+    color: #ff4148;
     font-size: 11px;
     font-weight: 400;
     &--checkbox {
@@ -100,7 +100,7 @@
     padding: 0 21px 0 28px;
     font-size: 10px;
     font-weight: 600;
-    line-height: 1.6;
+    line-height: 16px;
     cursor: pointer;
   }
   &__checkbox {
@@ -118,6 +118,7 @@
     background-color: #fff;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
   }
   &__btn {
     display: block;
@@ -133,7 +134,7 @@
     color: green;
     font-size: 20px;
     &--error {
-      color: #ff3139;
+      color: #ff4148;
     }
   }
 }

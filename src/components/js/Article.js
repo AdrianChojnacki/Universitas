@@ -1,7 +1,7 @@
 import React from "react";
 import Popup from "./Popup";
 import { useState } from "react";
-import videoPlay from "../img/video-play.svg";
+import videoPlay from "../img/video-play-svg.svg";
 
 function Article(props) {
   const { header, text1, text2, listHeader, list, img, reverse, video } = props;

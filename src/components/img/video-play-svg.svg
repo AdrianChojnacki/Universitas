@@ -1,0 +1,20 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 131" width="131" height="131">
+	<title>video-play-svg</title>
+	<defs>
+		<image width="38" height="43" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAArCAYAAAAUo/pwAAAABHNCSVQICAgIfAhkiAAAA0NJREFUWEfNmUmojlEYx+81RqZCKAolNlbItKKUa8XKsMCGDZmHzNc8ZJ7KsLjItCILpMQGC7JgRYYFhVCm0s3l+v10Tt173fvdb3i/9/ue+nXO+/bd9/n3vOc953/Orayvr+9eUVFxHMbCCzgK16CkUYmw8yiY1UTFHa6XwJNSqVPYV5J3g5EwGqqhN/yGU7ARPqYtUGH1JP0GvlKjRxCzkLY9fIHNcAx+pSUwCrNqCmoYQ7nYD1PCzWe0S+FGGuIyCYv5q4LAYeHGTVrHn0KLFtkIM3k78NVuCpWtC6+2OrzqxAVmKywm7klnG8yDtvAJ/DhOgh9LYpGrsJh4OJ2DMDHceEq7GJxmEol8hcXkU+nsg8HhxhXaFfCqUHWFCjN/R/BjWAddoRYOwA74nq/AJITF3H2DmLm0lfAe1sBZ+JOrwCSFxdwj6ByC8eHGI1rH3/1cxBVDmPmt2HTYAwOCoEu0K+FtNgKLJSzm7kRnFawG+z+D2N2h36LGYguLifsHQTPDjTdBrFV0rf4v0hIWE4+j4/w3Kty4R+sX7ThsFGkLM3kbmA1OJ/1CxWpo14Jf8r8ohbCY2zlPMToW58If4HJnRWtLKSwKdNXYC9PCDV3zpHIQFgVOoHMChsCFchKmwDHwAJ6XkzANqbu1gXCuHITpjF30J4d3+pC2qpTC3GNUwwLQIbvp8dpNT10phOl858MW6AU6Xx3wBvgcv4S0hel4nad0wMZtcB7TATeKtIQ1nateokKne7WpoLQqFmf3ZSTsADra7aFqOt0Wo1gVi+vhLjL3AR1EDehoP2QSVMyK6SAOg07W0EEsgsfZCCqGMJ2qjnVGeLieS5N4OVQsF12JuIvOQYAiokvVoSpSx5pXFDLG9PVWRxHR118MIrPy9ZkU5yvMszR3Qo4nw2VEJ5rTTihJYe4dd8IcsGLvQLOX194xCWFxt72eh3WBRHbbhQrzfMIDvEHhQZ5PLIfXeY3qLP8o0xhzPXMc6SwN1zPno7tZPrugnzV3BuuKvxUanoH5Ck9Domdgrb1KfZAHw541aG21H3olTw2PgPbE36QaVuwMGd3nNYzrXLjwFvWctbWKWS0Hd8P/jNxKtTzNJPsL/zRcA02rg4kAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.702;fill: #00b6dc } 
+		.shp1 { opacity: 0.2;fill: #00b6dc } 
+	</style>
+	<g id="Group_1">
+		<g id="Layer">
+			<path id="Ellipse_2_copy_3-2" class="shp0" d="M65.08 111.81C39.24 111.81 18.35 90.92 18.35 65.08C18.35 39.24 39.24 18.35 65.08 18.35C90.92 18.35 111.81 39.24 111.81 65.08C111.81 90.92 90.92 111.81 65.08 111.81Z" />
+		</g>
+		<g id="Layer">
+			<path id="Ellipse_2_copy_3_kopia-2" class="shp1" d="M65.5 131C29.28 131 0 101.72 0 65.5C0 29.28 29.28 0 65.5 0C101.72 0 131 29.28 131 65.5C131 101.72 101.72 131 65.5 131Z" />
+		</g>
+		<use id="play-button" href="#img1" transform="matrix(1,0,0,1,51,44)"/>
+	</g>
+</svg>

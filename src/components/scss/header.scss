@@ -1,5 +1,4 @@
 .header {
-  $p: &;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -9,6 +8,7 @@
   transition: 0.3s;
   z-index: 100;
   &--scroll {
+    display: none;
     padding: 10px 0;
     background-color: #00b6dc;
     .header__logo {
@@ -23,6 +23,5 @@
   &__logo {
     width: 92px;
     transition: 0.3s;
-    // height: 108px;
   }
 }
