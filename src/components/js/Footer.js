@@ -93,7 +93,7 @@ class Footer extends Component {
               Blog
             </a>
           </div>
-          <p className="footer__realization">Projekt i realizacja: asdzxc</p>
+          <p className="footer__realization">Projekt i realizacja: Crafton</p>
         </div>
       </footer>
     );
