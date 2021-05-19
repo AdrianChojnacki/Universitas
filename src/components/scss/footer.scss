@@ -52,8 +52,34 @@
 
 @media (max-width: 1024px) {
   .footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
     &__container {
       flex-direction: column;
+    }
+    &__address-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0;
+    }
+    &__address-box {
+      margin-bottom: 30px;
+    }
+    &__links-col {
+      padding-top: 30px;
+    }
+    &__header {
+      margin-bottom: 20px;
+    }
+    &__link {
+      margin-bottom: 15px;
+    }
+    &__realization {
+      position: static;
+      margin-top: 50px;
+      margin-bottom: 0;
+      text-align: right;
     }
   }
 }
