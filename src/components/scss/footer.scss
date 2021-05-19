@@ -8,24 +8,32 @@
     justify-content: space-between;
     position: relative;
   }
+  &__address-col {
+    margin-right: 45px;
+  }
   &__address-box {
     margin-bottom: 45px;
   }
   &__address {
     margin-bottom: 10px;
     color: #fff;
-    line-height: 0.87;
+    line-height: 13px;
     text-decoration: none;
   }
+  &__links-col {
+    padding-top: 5px;
+  }
   &__header {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-size: 15px;
     font-weight: 800;
+    line-height: 12px;
   }
   &__link {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
     color: #fff;
+    line-height: 12px;
     text-decoration: none;
     transition: 0.3s;
     &:hover {
@@ -36,5 +44,6 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    margin-bottom: 20px;
   }
 }

@@ -7,7 +7,7 @@ class Footer extends Component {
     return (
       <footer className="footer">
         <div className="footer__container container">
-          <div>
+          <div className="footer__address-col">
             <div className="footer__address-box">
               <p className="footer__address">ul. Głogowska 10</p>
               <p className="footer__address">61-719 Poznań</p>
@@ -18,7 +18,7 @@ class Footer extends Component {
             {/* <img src={map} alt="map" /> */}
             <GoogleMap />
           </div>
-          <div>
+          <div className="footer__links-col">
             <h6 className="footer__header">O nas</h6>
             <a className="footer__link" href="#">
               Dlaczego CDV
@@ -33,7 +33,7 @@ class Footer extends Component {
               Kontakt
             </a>
           </div>
-          <div>
+          <div className="footer__links-col">
             <h6 className="footer__header">Dla kandydata</h6>
             <a className="footer__link" href="#">
               Poradnik maturzysty
@@ -48,7 +48,7 @@ class Footer extends Component {
               Studia dla cudzoziemców
             </a>
           </div>
-          <div>
+          <div className="footer__links-col">
             <h6 className="footer__header">Dla studenta</h6>
             <a className="footer__link" href="#">
               Wirtualna Uczelnia
@@ -63,7 +63,7 @@ class Footer extends Component {
               Studiuj dalej
             </a>
           </div>
-          <div>
+          <div className="footer__links-col">
             <h6 className="footer__header">Dla biznesu</h6>
             <a className="footer__link" href="#">
               Współpraca z biznesem
@@ -78,7 +78,7 @@ class Footer extends Component {
               Znajdź pracownika
             </a>
           </div>
-          <div>
+          <div className="footer__links-col">
             <h6 className="footer__header">Na skróty</h6>
             <a className="footer__link" href="#">
               Aktualności
