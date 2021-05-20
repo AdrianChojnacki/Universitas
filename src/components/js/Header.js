@@ -51,19 +51,19 @@ class Header extends Component {
           </Link>
           <nav className={`nav ${this.state.mobileActive ? "nav--active" : ""}`}>
             <ul className="nav__list">
-              <Link className="nav__link" to="/istage">
+              <Link className="nav__link" onClick={this.handleCloseClick} to="/istage">
                 <li>I stopnia</li>
               </Link>
-              <Link className="nav__link" to="/iistage">
+              <Link className="nav__link" onClick={this.handleCloseClick} to="/iistage">
                 <li>II stopnia</li>
               </Link>
-              <Link className="nav__link" to="/postgraduate">
+              <Link className="nav__link" onClick={this.handleCloseClick} to="/postgraduate">
                 <li>Podyplomowe</li>
               </Link>
-              <Link className="nav__link" to="/trainings">
+              <Link className="nav__link" onClick={this.handleCloseClick} to="/trainings">
                 <li>Szkolenia</li>
               </Link>
-              <Link className="nav__link" to="/services">
+              <Link className="nav__link" onClick={this.handleCloseClick} to="/services">
                 <li>Usługi</li>
               </Link>
             </ul>
